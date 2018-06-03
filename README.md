@@ -1,5 +1,5 @@
 # Spring Boot + Mybatis + H2 DB
-
+H2 DB start up with Spring Boot start up, it shutdown as Spring Boot shutdown as well.
 
 # DataBase
 DB name: H2  (in memory DB)<br>
