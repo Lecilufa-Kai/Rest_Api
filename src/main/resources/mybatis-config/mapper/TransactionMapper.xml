@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="n26.nicolas.dao.TransactionDao">
+
+	<insert id="saveTransaction" parameterType="transaction" useGeneratedKeys="true" keyProperty="id">	
+		INSERT INTO TRANSACTION(
+			AMOUNT,
+			TIMESTAMPS
+		)
+		VALUES (
+			#{amount},
+			#{timestamp}
+		)
+	</insert>
+	
+	<select id="getStatistics" resultType="statistic">
+		SELECT 
+			SUM(AMOUNT) AS SUM,
+			TRUNCATE(AVG(AMOUNT),2)  AS AVG,
+			MAX(AMOUNT) AS MAX,
+			MIN(AMOUNT) AS MIN,
+			COUNT(ID) AS COUNT
+		FROM TRANSACTION
+		WHERE
+			TIMESTAMPS BETWEEN #{past} AND #{now}
+	</select>
+		
+</mapper> 
