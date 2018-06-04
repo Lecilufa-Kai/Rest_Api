@@ -23,7 +23,7 @@ SQL file: /resources/db/schema.sql<br>
 Use Mybatis<br><br>
 
 # POST /transactions
-Use synchronized method to handle concurrent requests<br><br>
+Use synchronized block to handle concurrent requests<br><br>
 
 # GET /statistics
 When it come to calculate SUM,AVG,MAX,MIN,COUNT, I leave these jobs to DB, using DB built-in function to get the result.<br>

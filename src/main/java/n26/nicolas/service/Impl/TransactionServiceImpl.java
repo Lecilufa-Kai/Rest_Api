@@ -21,13 +21,18 @@ public class TransactionServiceImpl implements TransactionService {
 	
 	@Transactional
 	@Override
-	public synchronized Long saveTransaction(Transaction transaction) throws Exception{
+	public  Long saveTransaction(Transaction transaction) throws Exception{
 		
 		Long start = System.currentTimeMillis();
 		
-		transaction.setTimestamp(start);
-		
-		transactionDao.saveTransaction(transaction);
+		synchronized(this){
+			
+			Long currentTimestamp = System.currentTimeMillis();
+			
+			transaction.setTimestamp(currentTimestamp);
+			
+			transactionDao.saveTransaction(transaction);
+		}
 		
 		Long end = System.currentTimeMillis();
 		
