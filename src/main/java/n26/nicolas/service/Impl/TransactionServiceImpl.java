@@ -36,7 +36,7 @@ public class TransactionServiceImpl implements TransactionService {
 		
 		Long end = System.currentTimeMillis();
 		
-		return start - end;
+		return end - start;
 	}
 
 	@Transactional(readOnly=true)
