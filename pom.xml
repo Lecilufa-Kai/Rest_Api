@@ -2,11 +2,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>n26</groupId>
-	<artifactId>nicolas</artifactId>
+	<artifactId>kai_rest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 
-	<name>nicolas</name>
+	<name>kai_rest</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -69,7 +69,7 @@
 
 
 	<build>
-		<finalName>nicolas</finalName>
+		<finalName>kai_rest</finalName>
 
 		<plugins>
 			<plugin>
