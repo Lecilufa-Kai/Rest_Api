@@ -2,6 +2,8 @@ package n26.nicolas.controller;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.http.HttpStatus;
@@ -32,6 +34,8 @@ public class TransactionController {
 		}else{
 			response.setStatus(HttpStatus.NO_CONTENT.value());
 		}
+
+		CloseableHttpClient client = HttpClients.createDefault();
 		
         return null;
     }
