@@ -1,0 +1,35 @@
+POST {{protocol}}{{host}}:{{port}}/transactions
+api-key: 6c93cc08109f47f7fdd031b12623b44b2AC334FA
+content-type: application/json
+
+{
+  "id": 123,
+  "amount": 123,
+  "timestamp": 123
+}
+
+###
+
+GET {{protocol}}{{host}}:{{port}}/api@1/salespartner-bank-configuration/all
+api-key: 6c93cc08109f47f7fdd031b12623b44b2AC334FA
+content-type: application/json
+
+###
+
+PUT {{protocol}}{{host}}:{{port}}/api@1/salespartner-bank-configuration
+api-key: 6c93cc08109f47f7fdd031b12623b44b2AC334FA
+content-type: application/json
+
+{
+  "salespartnerId": 726605,
+  "bankId": 16,
+  "active": 1
+}
+
+###
+
+GET {{protocol}}{{host}}:{{port}}/api@1/salespartner-for-clearingtool
+api-key: 6c93cc08109f47f7fdd031b12623b44b2AC334FA
+content-type: application/json
+
+###
